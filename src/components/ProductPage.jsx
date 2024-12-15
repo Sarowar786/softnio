@@ -7,13 +7,19 @@ import { GoPlus } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
 
 export default function ProductPage() {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("S");
+  const [showCheckoutButton, setShowCheckoutButton] = useState(false);
 
   const handleQuantityChange = (type) => {
     setQuantity((prev) =>
       type === "increment" ? prev + 1 : prev > 0 ? prev - 1 : 0
     );
+  };
+  const handleAddToCart = () => {
+    if (quantity > 0) {
+      setShowCheckoutButton(true);
+    }
   };
   return (
     <Container className="py-20">
@@ -153,7 +159,10 @@ export default function ProductPage() {
               </button>
             </div>
 
-            <button className="px-5 py-2 bg-btnColor text-white rounded hover:bg-blue-700">
+            <button
+              onClick={handleAddToCart}
+              className="px-5 py-2 bg-btnColor text-white rounded hover:bg-blue-700"
+            >
               Add to Cart
             </button>
             <span>
@@ -162,15 +171,18 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
+      
       {/* checkout button */}
-      <div className="flex items-center justify-center pt-10  ">
-        <button className="w-[140px] h-10 py-2 px-6 rounded-[20px] text-sm bg-[#FFBB5A]">
-          Checkout
-          <span className=" ml-2 bg-white w-5 text-[12px] h-5 py-[2px] px-[6px]  rounded   text-center">
-            {quantity}
-          </span>
-        </button>
-      </div>
+      {showCheckoutButton && (
+        <div className="flex items-center justify-center pt-10">
+          <button className="w-[140px] h-10 py-2 px-6 rounded-[20px] text-sm bg-[#FFBB5A] shadow-lg">
+            Checkout
+            <span className="ml-2 bg-white w-5 text-[12px] h-5 py-[2px] px-[6px] rounded text-center">
+              {quantity}
+            </span>
+          </button>
+        </div>
+      )}
     </Container>
   );
 }
