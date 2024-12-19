@@ -66,6 +66,7 @@ Follow best practice
 ## Technology Stack
 This project is built using Next.js and leverages modern JavaScript libraries and tools to provide a robust development environment.
 
-![Alt text](https://github.com/Sarowar786/sky-gears/blob/f959779ed006ef2b2051efcbe159520ef5c486b8/Screenshot%202024-11-17%20at%2000-35-19%20Create%20Next%20App.png)
+![Alt text](https://github.com/Sarowar786/softnio/blob/5c40166a2cad37da742c943431cea70badfdc6bc/Screenshot_22.png)
+![Alt text](https://github.com/Sarowar786/softnio/blob/5c40166a2cad37da742c943431cea70badfdc6bc/Screenshot_21.png)
 
 
