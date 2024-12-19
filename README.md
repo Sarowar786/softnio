@@ -13,7 +13,7 @@ To begin working on this project:
    Clone this repository to your local machine using the following command:
 
    ```bash
-   https://github.com/Sarowar786/sky-gears.git
+   https://github.com/Sarowar786/softnio.git
    ```
 Install Dependencies:
 
